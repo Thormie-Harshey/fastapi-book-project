@@ -26,4 +26,3 @@ jobs:
 
       - name: Run tests
         run: pytest  # Run the test suite
-#should trigger upon a PR
