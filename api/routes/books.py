@@ -70,4 +70,3 @@ async def get_book(book_id: int) -> Book:
     if not book:
         raise HTTPException(status_code=404, detail="Book not found")
     return book
-#this new function is the missing one

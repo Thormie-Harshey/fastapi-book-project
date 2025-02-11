@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: CICD Pipeline
 
 on:
   pull_request:
@@ -26,4 +26,3 @@ jobs:
 
       - name: Run tests
         run: pytest  # Run the test suite
-# triggers upon a PR
