@@ -32,5 +32,5 @@ jobs:
             docker rm fastapi-container || true
 
             # Run new container
-            docker run -d --name fastapi-container -p 80:8000 thormie/fastapi-app:latest
+            docker run -d --name fastapi-container -p 8000:8000 thormie/fastapi-app:latest
           EOF
