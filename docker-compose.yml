@@ -1,13 +1,11 @@
 version: '3.8'
 
 services:
-  app:
+  fastapi:
     build: .
     container_name: fastapi-app
     ports:
       - "8000:8000"
-    networks:
-      - app-network
 
   nginx:
     image: nginx:latest
@@ -17,9 +15,4 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - app
-    networks:
-      - app-network
-
-networks:
-  app-network:
+      - fastapi   
