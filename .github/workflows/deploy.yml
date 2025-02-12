@@ -15,7 +15,7 @@ jobs:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.EC2_PUBLIC_IP }}
+          host: ${{ secrets.EC2_PUBLIC_IP }} #this is an ec2 public ip
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
