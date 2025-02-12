@@ -1,4 +1,4 @@
-name: CICD Pipeline
+name: CI Pipeline
 
 on:
   pull_request:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest  # Run the tests on Ubuntu
     
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4  # Fetch the code from GitHub
 
       - name: Set up Python
@@ -25,5 +25,6 @@ jobs:
           pip install pytest  # Install pytest
 
       - name: Run tests
-        run: pytest  # Run the test suite
-        #should run upon a PR
+        run: |
+          pytest  # Run the test suite
+      
